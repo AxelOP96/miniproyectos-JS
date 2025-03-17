@@ -16,3 +16,43 @@ header{
 .title{
     color: rgb(30, 30, 51);
 }
+.panel{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+     right: 0;
+    /*left: 0; */
+    z-index: 998;
+    width: 15%;
+    background-color: rgba(34, 34, 34, 0.85);
+    /*transition: transform 0.3s ease;
+    De arriba
+    transform: translate(0, -100%);*/
+  }
+  nav{
+    padding: .2rem 1rem;
+    /* width: inherit; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
+  nav a{
+    width: inherit;
+    display: block;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: large;
+    color: yellow;
+    padding: .9rem 0;
+  }
+  nav a:hover{
+    background-color: yellow;
+    color: white;
+  }
+  nav a.is-active{
+    background-color: white;
+  }
