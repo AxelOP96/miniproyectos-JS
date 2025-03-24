@@ -16,6 +16,9 @@ header{
 .title{
     color: rgb(30, 30, 51);
 }
+.center{
+  text-align: center;
+}
 .panel{
     position: fixed;
     top: 0;
@@ -47,7 +50,7 @@ header{
     text-transform: uppercase;
     font-size: large;
     color: yellow;
-    padding: .9rem 0;
+    padding: .9rem 2rem;
   }
   nav a:hover{
     background-color: yellow;
@@ -56,3 +59,29 @@ header{
   nav a.is-active{
     background-color: white;
   }
+.half{
+    display: flex;
+    
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.ppt-1{
+  border: 1px solid green;
+  border-radius: .5rem;
+  width: 60%;
+  height: 400px;
+  margin: auto;
+}
