@@ -15,7 +15,7 @@
             <nav class="menu">
                 <a href="">Detector de gestos</a>
                 <a href="">Editor de notas</a>
-                <a href="">Ejercicio 3</a>
+                <a href="">Piedra, Papel, Tijeras</a>
                 <a href="">Ejercicio 4</a>
                 <a href="">Ejercicio 5</a>
                 <a href="">Ejercicio 6</a>
@@ -46,9 +46,9 @@
             <div class="flex-column">
                 <div class="ppt-1">
                     <div class="opponent flex-row">
-                        <img src="./assets/cover.png" alt="">
-                        <img src="./assets/cover.png" alt="">
-                        <img src="./assets/cover.png" alt="">
+                        <img class="cover" src="./assets/cover.png" alt="">
+                        <img class="cover" src="./assets/cover.png" alt="">
+                        <img class="cover" src="./assets/cover.png" alt="">
                     </div>
                     <div class="you flex-row">
                         <button class="gameppt"><img id="paper" src="./assets/paper.png" alt=""></button>
@@ -57,7 +57,9 @@
                         
                         
                         
+                        
                     </div>
+                    <button disabled id="restart">Restart</button>
                 </div>
                 <div class="ppt-1"></div>
             </div>
@@ -68,6 +70,7 @@
     <script src="imports_js.js"></script>
     <script type="module" src="./js/gesture_detector.js"></script>
     <script type="module" src="./js/indexedDB.js"></script>
+    <script src="./js/rock_scissor_paper.js"></script>
 
 </body>
 </html>

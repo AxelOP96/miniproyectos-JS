@@ -1,5 +1,5 @@
 const d = document;
-const $btns = d.querySelectorAll(".gameppt");
+const $btns = d.querySelectorAll(".cover");
 const $idRock = d.getElementById("rock");
 const $idPaper = d.getElementById("paper");
 const $idScissor = d.getElementById("scissor");
@@ -33,6 +33,13 @@ d.addEventListener("click", (e)=>{
     jugar(decision);
 
     function jugar(decision){
-        
+        let sources = ["./assets/paper.png", "./assets/rock.png","./assets/scissor.png"];
+        $btns.forEach((btn, index) =>{
+            if(index !== 2) btn.classList.add("none")
+            if(index == 2){
+                console.log(Math.floor(Math.random()*sources.length))
+                btn.setAttribute("src", sources[Math.floor(Math.random()*sources.length)])
+            }
+        })
     }
 })
