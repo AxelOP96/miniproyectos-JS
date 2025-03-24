@@ -81,7 +81,22 @@ header{
 .ppt-1{
   border: 1px solid green;
   border-radius: .5rem;
-  width: 60%;
+  width: 50%;
   height: 400px;
   margin: auto;
+}
+
+.opponent, .you{
+  gap: 2rem;
+  padding: 1rem 1.5rem;
+}
+.gameppt{
+  border: none;
+  outline: none;
+  background-color: inherit;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.opponent button img, .gameppt img{
+  border-radius: 50%;
 }
