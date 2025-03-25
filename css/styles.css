@@ -116,3 +116,13 @@ section{
 #restart{
   margin: auto;
 }
+.card-time{
+  width: 40%;
+  height: max-content;
+  background-color: azure;
+  padding: 2rem;
+  border-radius: .5rem;
+}
+.card-time img{
+  max-width: 200px;
+}
