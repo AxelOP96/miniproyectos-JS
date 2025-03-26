@@ -129,3 +129,16 @@ section{
 #weather{
   margin-top: 15rem;
 }
+#result{
+  background-color: white;
+  z-index: 2;
+  width: 30%;
+  height: 100px;
+  border-radius: .5rem;
+  padding: 5rem;
+  position: relative;
+  top: -300px;
+  left: 25rem;
+  border: 2px solid black;
+  box-shadow: 1px 1px 1px black;
+}
