@@ -5,7 +5,7 @@ const $idPaper = d.getElementById("paper");
 const $idScissor = d.getElementById("scissor");
 const $restart = d.getElementById("restart");
 const $result = d.getElementById("result");
-//const $btnsExtended = d.querySelectorAll(".gameppt2");
+const $game = d.querySelectorAll(".game");
 const $restart2 = d.getElementById("restart2")
 const $result2 = d.getElementById("result2")
 
@@ -43,7 +43,7 @@ d.addEventListener("click", (e)=>{
         e.target.parentElement.setAttribute("disabled", "")
     }
     if (e.target === $restart) {
-        reiniciar();
+        reiniciar($btns, $result, $game);
     }
     
     
@@ -100,20 +100,20 @@ d.addEventListener("click", (e)=>{
         })
     }
 
-    function reiniciar(){
-            $btns.forEach( btn =>{
-                btn.classList.remove("none");
-                btn.setAttribute("src", "./assets/cover.png")
-            })
-            $idRock.classList.remove("none");
-            $idRock.parentElement.removeAttribute("disbled");
-            $idScissor.classList.remove("none");
-            $idScissor.parentElement.removeAttribute("disbled");
-            $idPaper.classList.remove("none");
-            $idPaper.parentElement.removeAttribute("disbled");
-            $result.innerHTML = "";
-            $result.classList.add("none");
-        }
+    function reiniciar($btns, $result, $ids){
+        $btns.forEach( btn =>{
+            btn.classList.remove("none");
+            btn.setAttribute("src", "./assets/cover.png")
+        });
+        $ids.forEach(id =>{
+            id.classList.remove("none")
+            id.parentElement.removeAttribute("disabled");
+            
+        });
+        
+        $result.innerHTML = "";
+        $result.classList.add("none");
+    }
         
 
 })
@@ -131,5 +131,30 @@ d.addEventListener("click", (e)=>{
             $coverPlus.setAttribute("src", `${sourcesExtended[$src]}`);
         }
     })
-    
+    if (e.target === $restart) {
+        reiniciarPlus($btnsExtended, $result2, "lizardexp", "paperexp", "rockexp", "scissorexp", "spockexp");
+    }
+    function reiniciarPlus($btns, $result, ...$ids){
+        for(let i=0; i<$btns.length; i++){
+            let elemento = d.getElementById(`${$btns[i]}`);
+            elemento.classList.remove("none")
+            elemento.setAttribute("src", "./assets/cover.png")
+        }
+        /* $btns.forEach( btn =>{
+            btn.classList.remove("none");
+            btn.setAttribute("src", "./assets/cover.png")
+        }); */
+        $ids.forEach(id =>{
+            const element = d.getElementById(id);
+            if(element){
+                element.classList.remove("none")
+                element.parentElement.removeAttribute("disabled");
+            }
+        });
+        
+        $result.innerHTML = "";
+        $result.classList.add("none");
+    }
+     
 })
+
