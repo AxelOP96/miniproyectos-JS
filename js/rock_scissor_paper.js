@@ -3,8 +3,11 @@ const $btns = d.querySelectorAll(".cover");
 const $idRock = d.getElementById("rock");
 const $idPaper = d.getElementById("paper");
 const $idScissor = d.getElementById("scissor");
-const $restart = d.getElementById("restart")
+const $restart = d.getElementById("restart");
 const $result = d.getElementById("result");
+//const $btnsExtended = d.querySelectorAll(".gameppt2");
+const $restart2 = d.getElementById("restart2")
+const $result2 = d.getElementById("result2")
 
 d.addEventListener("click", (e)=>{
     if(e.target === $idRock){
@@ -116,9 +119,17 @@ d.addEventListener("click", (e)=>{
 })
 
 //Rock, Scissor, Paper, Lizard and Spock
+const $btnsExtended = ["lizardexp", "spockexp", "scissorexp", "rockexp", "paperexp"]
 const gameOptions = d.querySelectorAll(".gameppt2"),
 sourcesExtended = ["./assets/lizardexp.png", "./assets/scissorexp.png", "./assets/paperexp.png", "./assets/rockexp.png", "./assets/spockexp.png"];
-
+const $coverPlus = d.querySelector(".coverplus")
 d.addEventListener("click", (e)=>{
+    $btnsExtended.forEach((option)=>{
+        if(e.target.getAttribute("id") === option){
+            console.log(option)
+            let $src = Math.floor(Math.random() * $btnsExtended.length);
+            $coverPlus.setAttribute("src", `${sourcesExtended[$src]}`);
+        }
+    })
     
 })
