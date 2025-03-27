@@ -89,9 +89,10 @@ d.addEventListener("click", (e)=>{
         })
     }
 
-    function reiniciar(e){
+    function reiniciar(){
             $btns.forEach( btn =>{
                 btn.classList.remove("none");
+                btn.setAttribute("src", "./assets/cover.png")
             })
             $idRock.classList.remove("none");
             $idScissor.classList.remove("none");
