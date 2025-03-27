@@ -30,15 +30,18 @@ d.addEventListener("click", (e)=>{
         $idScissor.style.transform = 'rotate(180deg)'
         $idScissor.style.transform = 'rotate(360deg)'
     }
+    if (e.target === $restart) {
+        reiniciar();
+    }
     let decision = e.target.getAttribute("src").slice(9, e.target.getAttribute("src").length-4);
     jugar(decision);
+    
 
     function jugar(decision){
         let sources = ["./assets/paper.png", "./assets/rock.png","./assets/scissor.png"];
         $btns.forEach((btn, index) =>{
             if(index !== 2) btn.classList.add("none")
             if(index == 2){
-                //console.log(Math.floor(Math.random()*sources.length))
                 btn.setAttribute("src", sources[Math.floor(Math.random()*sources.length)])
             }
             const $h3 = d.createElement("h3");
@@ -46,36 +49,56 @@ d.addEventListener("click", (e)=>{
             if(decision === randomSelected){
                 $h3.innerHTML = "Empate"
                 $result.appendChild($h3)
+                $result.style.backgroundColor = '#d9e9e6';
             }
             else if(decision === "rock" && randomSelected === "scissor"){
-                $h3.innerHTML = "Ganaste"
+                $h3.innerHTML = "Ganaste";
                 $result.appendChild($h3);
+                $result.style.backgroundColor = "#b2e9b2";
             }
             else if(decision === "rock" && randomSelected === "paper"){
                 $h3.innerHTML = "Perdiste"
                 $result.appendChild($h3);
+                $result.style.backgroundColor = '#d65b2a';
             }
             else if(decision === "paper" && randomSelected === "scissor"){
                 $h3.innerHTML = "Perdiste"
                 $result.appendChild($h3);
+                $result.style.backgroundColor = '#d65b2a';
             }
             else if(decision === "paper" && randomSelected === "rock"){
-                $h3.innerHTML = "Ganaste"
+                $h3.innerHTML = "Ganaste";
                 $result.appendChild($h3);
+                $result.style.backgroundColor = "#b2e9b2";
             }
             else if(decision === "scissor" && randomSelected === "rock"){
                 $h3.innerHTML = "Perdiste"
                 $result.appendChild($h3);
+                $result.style.backgroundColor = '#d65b2a';
             }
             else if(decision === "scissor" && randomSelected === "paper"){
                 $h3.innerHTML = "Ganaste"
                 $result.appendChild($h3);
+                $result.style.backgroundColor = "#b2e9b2";
             }
             $result.classList.remove("none");
             setTimeout( ()=>{
-                $result.classList.add("none")
+                $result.classList.add("none");
             }, 2000)
-            
+            $restart.removeAttribute("disabled")
         })
     }
+
+    function reiniciar(e){
+            $btns.forEach( btn =>{
+                btn.classList.remove("none");
+            })
+            $idRock.classList.remove("none");
+            $idScissor.classList.remove("none");
+            $idPaper.classList.remove("none");
+            $result.innerHTML = "";
+            $result.classList.add("none");
+        }
+        
+
 })
