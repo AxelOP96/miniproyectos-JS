@@ -54,5 +54,53 @@ El acceso a la cámara también requiere el permiso del usuario.
 
 Este proyecto debe ejecutarse en un entorno seguro (HTTPS) para acceder a la geolocalización y la cámara.
 
+Piedra, Papel o Tijera
+Este mini proyecto es un juego interactivo de Piedra, Papel o Tijera que permite a los usuarios elegir una opción y ver el resultado de su elección en comparación con una selección aleatoria del sistema.
+
+## Funciones Principales
+-jugar(decision)
+Esta función se encarga de procesar la elección del usuario y determinar el resultado del juego. Las opciones son:
+
+Piedra (rock)
+
+Papel (paper)
+
+Tijeras (scissor)
+
+La función compara la decisión del usuario con una opción aleatoria y muestra el resultado en la pantalla.
+
+-reiniciar()
+Esta función restablece el estado del juego, mostrando nuevamente todas las opciones y limpiando cualquier mensaje de resultado anterior.
+
+## Uso
+Para utilizar el juego, asegúrate de tener los siguientes elementos en tu HTML:
+
+
+<div class="cover" id="rock"> <img src="./assets/rock.png"> </div>
+<div class="cover" id="paper"> <img src="./assets/paper.png"> </div>
+<div class="cover" id="scissor"> <img src="./assets/scissor.png"> </div>
+<button id="restart" disabled>Reiniciar</button>
+<div id="result" class="none"></div>
+Incluye el siguiente script en tu HTML para activar las funciones del juego:
+
+
+<script type="module">
+    import { jugar, reiniciar } from './tuArchivo.js';
+
+    // Se inicializa el juego
+    d.addEventListener("click", (e) => {
+        if (e.target === $restart) {
+            reiniciar();
+        } else {
+            // Lógica del juego
+            jugar(decision);
+        }
+    });
+</script>
+## Consideraciones
+Asegúrate de que el archivo JavaScript que contiene las funciones del juego esté correctamente vinculado en tu HTML.
+
+Puedes personalizar las imágenes y estilos del juego según tus preferencias.
+
 ## Contribuciones
 Las contribuciones son bienvenidas. Si deseas mejorar este proyecto, por favor abre un issue o envía un pull request.
