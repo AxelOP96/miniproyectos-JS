@@ -12,7 +12,10 @@ d.addEventListener("click", (e)=>{
         $idScissor.classList.add("none");
         $idRock.style.transform = 'scale(1.2)';
         $idRock.style.transform = 'rotate(180deg)'
-        $idRock.style.transform = 'rotate(360deg)'
+        $idRock.style.transform = 'rotate(360deg)';
+        let decision = e.target.getAttribute("src").slice(9, e.target.getAttribute("src").length-4);
+        jugar(decision);
+        e.target.parentElement.setAttribute("disabled", "")
     }
 
     if(e.target === $idPaper){
@@ -20,21 +23,26 @@ d.addEventListener("click", (e)=>{
         $idScissor.classList.add("none");
         $idPaper.style.transform = 'scale(1.2)';
         $idPaper.style.transform = 'rotate(180deg)'
-        $idPaper.style.transform = 'rotate(360deg)'
+        $idPaper.style.transform = 'rotate(360deg)';
+        let decision = e.target.getAttribute("src").slice(9, e.target.getAttribute("src").length-4);
+        jugar(decision);
+        e.target.parentElement.setAttribute("disabled", "")
     }
 
     if(e.target === $idScissor){
         $idPaper.classList.add("none");
         $idRock.classList.add("none");
         $idScissor.style.transform = 'scale(1.2)';
-        $idScissor.style.transform = 'rotate(180deg)'
-        $idScissor.style.transform = 'rotate(360deg)'
+        $idScissor.style.transform = 'rotate(180deg)';
+        $idScissor.style.transform = 'rotate(360deg)';
+        let decision = e.target.getAttribute("src").slice(9, e.target.getAttribute("src").length-4);
+        jugar(decision);
+        e.target.parentElement.setAttribute("disabled", "")
     }
     if (e.target === $restart) {
         reiniciar();
     }
-    let decision = e.target.getAttribute("src").slice(9, e.target.getAttribute("src").length-4);
-    jugar(decision);
+    
     
 
     function jugar(decision){
@@ -95,11 +103,22 @@ d.addEventListener("click", (e)=>{
                 btn.setAttribute("src", "./assets/cover.png")
             })
             $idRock.classList.remove("none");
+            $idRock.parentElement.removeAttribute("disbled");
             $idScissor.classList.remove("none");
+            $idScissor.parentElement.removeAttribute("disbled");
             $idPaper.classList.remove("none");
+            $idPaper.parentElement.removeAttribute("disbled");
             $result.innerHTML = "";
             $result.classList.add("none");
         }
         
 
+})
+
+//Rock, Scissor, Paper, Lizard and Spock
+const gameOptions = d.querySelectorAll(".gameppt2"),
+sourcesExtended = ["./assets/lizardexp.png", "./assets/scissorexp.png", "./assets/paperexp.png", "./assets/rockexp.png", "./assets/spockexp.png"];
+
+d.addEventListener("click", (e)=>{
+    
 })
