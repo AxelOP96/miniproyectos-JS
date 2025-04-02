@@ -156,3 +156,20 @@ section{
   margin: 0 auto;
   border-radius: .5rem;
 }
+#age{
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+#age label input{
+  border-radius: .5rem;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 1px solid grey;
+}
+.large{
+  font-weight: bold;
+  font-size: 30px;
+  
+}
