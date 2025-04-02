@@ -17,7 +17,7 @@
                 <a href="#editor">Editor de notas</a>
                 <a href="#rock_scissor_paper">Piedra, Papel, Tijeras</a>
                 <a href="#weather">Datos con Api del Clima</a>
-                <a href="">Ejercicio 5</a>
+                <a href="#advices">Api de Consejos</a>
                 <a href="">Ejercicio 6</a>
                 <a href="">Ejercicio 7</a>
                 <a href="">Ejercicio 8</a>
@@ -68,11 +68,11 @@
                         <img src="./assets/cover.png" alt="" class="coverplus">
                     </div>
                     <div class="you flex-row">
-                        <button class="gameppt2"><img id="lizardexp" src="./assets/lizardexp.png" alt=""></button>
-                        <button class="gameppt2"><img id="paperexp" src="./assets/paperexp.png" alt=""></button>
-                        <button class="gameppt2"><img id="rockexp" src="./assets/rockexp.png" alt=""></button>
-                        <button class="gameppt2"><img id="scissorexp" src="./assets/scissorexp.png" alt=""></button>
-                        <button class="gameppt2"><img id="spockexp" src="./assets/spockexp.png" alt=""></button>
+                        <button class="gameppt2"><img class="game-ext" id="lizardexp" src="./assets/lizardexp.png" alt=""></button>
+                        <button class="gameppt2"><img class="game-ext" id="paperexp" src="./assets/paperexp.png" alt=""></button>
+                        <button class="gameppt2"><img class="game-ext" id="rockexp" src="./assets/rockexp.png" alt=""></button>
+                        <button class="gameppt2"><img class="game-ext" id="scissorexp" src="./assets/scissorexp.png" alt=""></button>
+                        <button class="gameppt2"><img class="game-ext" id="spockexp" src="./assets/spockexp.png" alt=""></button>
                     </div>
                 </div>
                 <button disabled id="restart2">Restart</button>
@@ -83,13 +83,21 @@
             <h2 class="center">Datos con Api del Clima</h2>
             Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
         </section>
-        <section></section>
-        
+        <section>
+            <h2 class="center">Ahorcado</h2>
+        </section>
+        <section id="advices">
+            <h2 class="center">Api de Consejos</h2>
+            <div id="advice" class="advice">
+
+            </div>
+        </section>
     </main>
     <script  type="module" src="imports_js.js"></script>
     <script type="module" src="./js/gesture_detector.js"></script>
     <script type="module" src="./js/indexedDB.js"></script>
     <script src="./js/rock_scissor_paper.js"></script>
     <script src="./js/weather.js"></script>
+    <script src="./js/advice.js"></script>
 </body>
 </html>
