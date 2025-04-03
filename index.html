@@ -17,10 +17,10 @@
                 <a href="#editor">Editor de notas</a>
                 <a href="#rock_scissor_paper">Piedra, Papel, Tijeras</a>
                 <a href="#weather">Datos con Api del Clima</a>
+                <a href="#hangman">Ahorcado</a>
                 <a href="#advices">Api de Consejos</a>
-                <a href="">Calculador de Edad</a>
-                <a href="">Ejercicio 7</a>
-                <a href="">Ejercicio 8</a>
+                <a href="#yourAge">Calculador de Edad</a>
+                <a href="#ecommerce">E-Commerce</a>
                 <a href="">Ejercicio 9</a>
                 <a href="">Ejercicio 10</a>
             </nav>
@@ -83,7 +83,7 @@
             <h2 class="center">Datos con Api del Clima</h2>
             Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
         </section>
-        <section>
+        <section id="hangman">
             <h2 class="center">Ahorcado</h2>
         </section>
         <section id="advices">
@@ -95,14 +95,14 @@
         <section id="yourAge">
             <h2 class="center">Calculador de Edad</h2>
             <form action="" id="age">
-                <label for=""  class="flex-column">DAY
-                    <input type="number" name="" id="" placeholder="DD">
+                <label for="inputDay"  class="flex-column">DAY
+                    <input type="number" name="inputDay" id="inputDay" placeholder="DD">
                 </label>
-                <label for="" class="flex-column">MONTH
-                    <input type="number" name="" id="" placeholder="MM">
+                <label for="inputMonth" class="flex-column">MONTH
+                    <input type="number" name="inputMonth" id="inputMonth" placeholder="MM">
                 </label>
-                <label for=""  class="flex-column">YEAR
-                    <input type="number" name="" id="" placeholder="YYYY">
+                <label for="inputYear"  class="flex-column">YEAR
+                    <input type="number" name="inputYear" id="inputYear" placeholder="YYYY">
                 </label>
             </form>
             <hr>
@@ -112,6 +112,48 @@
                 <div id="calcDays"></div>
             </div>
         </section>
+        <section id="ecommerce">
+            <h2 class="center">E-Commerce</h2>
+            <article class="flex-row article">
+                <div class="menu-desserts">
+                    <h3>Desserts</h3>
+                    <div class="menues">
+                        <!-- <picture class="flex-column">
+                            <img src="./assets/image-waffle-desktop.jpg" alt="">
+                            <button class="add-cart"><span><img src="./assets/icon-add-to-cart.svg" alt=""></span><span>Add to Cart</span></button>
+                        </picture> -->
+                        <!-- <picture class="flex-column">
+                            <img src="./assets/image-creme-brulee-desktop.jpg" alt="">
+                        </picture>
+                        <picture class="flex-column">
+                            <img src="./assets/image-macaron-desktop.jpg" alt="">
+                        </picture>
+                        <picture class="flex-column">
+                            <img src="./assets/image-tiramisu-desktop.jpg" alt="">
+                        </picture> -->
+                        <!-- <picture class="flex-column">
+                            <img src="./assets/image-waffle-desktop.jpg" alt="">
+                        </picture>
+                        <picture class="flex-column">
+                            <img src="./assets/image-waffle-desktop.jpg" alt="">
+                        </picture>
+                        <picture class="flex-column">
+                            <img src="./assets/image-waffle-desktop.jpg" alt="">
+                        </picture>
+                        <picture class="flex-column">
+                            <img src="./assets/image-waffle-desktop.jpg" alt="">
+                        </picture>
+                        <picture class="flex-column">
+                            <img src="./assets/image-waffle-desktop.jpg" alt="">
+                        </picture> -->
+                    </div>
+                </div>
+                <div id="cart" class="cart">
+                    <h2 id="count-products">Your Cart(0)</h2>
+                </div>
+            </article>
+            
+        </section>
     </main>
     <script  type="module" src="imports_js.js"></script>
     <script type="module" src="./js/gesture_detector.js"></script>
@@ -119,5 +161,7 @@
     <script src="./js/rock_scissor_paper.js"></script>
     <script src="./js/weather.js"></script>
     <script src="./js/advice.js"></script>
+    <script src="./js/age_calculator.js"></script>
+    <script src="./js/ecommerce.js"></script>
 </body>
 </html>
