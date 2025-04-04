@@ -250,3 +250,14 @@ section{
   padding: 2.5rem;
   background-color: hsl(20, 50%, 98%);
 }
+#words{
+  width: 80%;
+  & .letter{
+    padding: 1rem;
+    background-color: rgb(181, 242, 181);
+    outline: none;
+    border: 1px solid green;
+    border-radius: .5rem;
+    cursor: pointer;
+  }
+}
