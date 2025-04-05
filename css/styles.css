@@ -36,7 +36,7 @@ section{
     /*left: 0; */
     z-index: 998;
     width: 15%;
-    background-color: rgba(34, 34, 34, 0.85);
+    background-color: rgba(0, 0, 0, 0.85);
     /*transition: transform 0.3s ease;
     De arriba
     transform: translate(0, -100%);*/
@@ -49,6 +49,7 @@ section{
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    overflow: hidden;
   }
   nav a{
     width: inherit;
@@ -63,7 +64,7 @@ section{
   }
   nav a:hover{
     background-color: yellow;
-    color: white;
+    color: rgb(41, 40, 40);
   }
   nav a.is-active{
     background-color: white;
@@ -190,7 +191,7 @@ section{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 2rem;
+  /* padding: 2rem; */
   gap: 1.5rem;
 
 }
@@ -199,12 +200,13 @@ section{
   width: 250px;
   height: 250px;
   border-radius: .5rem;
+  object-fit:cover;
 }
 .menues p{
-  color: hsl(7, 20%, 60%);
+  color: rgb(111, 73, 68);
 }
 .menues h4{
-  color: hsl(14, 86%, 42%);
+  color: hsl(14, 87%, 39%);
 }
 .menues button{
   background-color: hsl(20, 50%, 98%);
@@ -238,7 +240,8 @@ section{
   flex-wrap: wrap;
   border-radius: .5rem;
   height: max-content;
-  background-color: hsl(13, 31%, 94%);
+  background-color: rgb(247, 247, 247);
+  padding: 1rem;
 }
 #logo, .logo{
   width: 15px;

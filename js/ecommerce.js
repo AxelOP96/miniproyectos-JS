@@ -16,12 +16,13 @@ d.addEventListener("DOMContentLoaded", (e)=>{
             const $p = d.createElement("p");
             const $h3 = d.createElement("h3");
             const $h4 = d.createElement("h4");
-            $img.setAttribute("src",`${product.image.desktop}`)
+            $img.setAttribute("src",`${product.image.desktop}`);
+            $img.setAttribute("alt", `${product.name}`)
             $picture.appendChild($img);
-            $button.innerHTML = `<img id="logo" src="./assets/icon-add-to-cart.svg"> Add to Cart`;
-            $buttonSelected.innerHTML = `<img class="logo" src="./assets/icon-decrement-quantity.svg">
+            $button.innerHTML = `<img id="logo" src="./assets/icon-add-to-cart.svg" alt="Carrito"> Add to Cart`;
+            $buttonSelected.innerHTML = `<img class="logo" src="./assets/icon-decrement-quantity.svg" alt="Signo de menos">
                                         <span id="products-quantity">1</span>
-                                        <img class="logo" src="./assets/icon-increment-quantity.svg">`
+                                        <img class="logo" src="./assets/icon-increment-quantity.svg" alt="Signo de más">`
             $button.classList.add("flex-row")
             $buttonSelected.classList.add("none", "selected");
             $p.innerHTML = `${product.category}`;
@@ -38,7 +39,8 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     }
     if($countProducts.innerHTML.slice(10,11)== '0'){
         const img = d.createElement("img");
-        img.setAttribute("src", "./assets/illustration-empty-cart.svg")
+        img.setAttribute("src", "./assets/illustration-empty-cart.svg");
+        img.setAttribute("alt", "Sin articulos en tu carrito");
         $cart.appendChild(img);
     }
 })

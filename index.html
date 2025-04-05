@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Axel Leguero">
     <title>Miniproyectos con JS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -51,14 +53,14 @@
             <div class="flex-column">
                 <div class="ppt-1">
                     <div class="opponent flex-row">
-                        <img class="cover" src="./assets/cover.png" alt="">
-                        <img class="cover" src="./assets/cover.png" alt="">
-                        <img class="cover" src="./assets/cover.png" alt="">
+                        <img class="cover" src="./assets/cover.png" alt="reverso de una moneda">
+                        <img class="cover" src="./assets/cover.png" alt="reverso de una moneda">
+                        <img class="cover" src="./assets/cover.png" alt="reverso de una moneda">
                     </div>
                     <div class="you flex-row">
-                        <button class="gameppt"><img class="game" id="paper" src="./assets/paper.png" alt=""></button>
-                        <button class="gameppt"><img class="game" id="rock" src="./assets/rock.png" alt=""></button>
-                        <button class="gameppt"><img class="game" id="scissor" src="./assets/scissor.png" alt=""></button>
+                        <button id="al" aria-label="Name" class="gameppt"><img class="game" id="paper" src="./assets/paper.png" alt="Imagen de papel"></button>
+                        <button id="al" aria-label="Name" class="gameppt"><img class="game" id="rock" src="./assets/rock.png" alt="Imagen de roca"></button>
+                        <button id="al" aria-label="Name" class="gameppt"><img class="game" id="scissor" src="./assets/scissor.png" alt="Imagen de tijera"></button>
                     </div>
                     
                 </div>
@@ -69,11 +71,11 @@
                         <img src="./assets/cover.png" alt="" class="coverplus">
                     </div>
                     <div class="you flex-row">
-                        <button class="gameppt2"><img class="game-ext" id="lizardexp" src="./assets/lizardexp.png" alt=""></button>
-                        <button class="gameppt2"><img class="game-ext" id="paperexp" src="./assets/paperexp.png" alt=""></button>
-                        <button class="gameppt2"><img class="game-ext" id="rockexp" src="./assets/rockexp.png" alt=""></button>
-                        <button class="gameppt2"><img class="game-ext" id="scissorexp" src="./assets/scissorexp.png" alt=""></button>
-                        <button class="gameppt2"><img class="game-ext" id="spockexp" src="./assets/spockexp.png" alt=""></button>
+                        <button id="al" aria-label="Name" class="gameppt2"><img class="game-ext" id="lizardexp" src="./assets/lizardexp.png" alt="Imagen simbolizando un lagarto"></button>
+                        <button id="al" aria-label="Name" class="gameppt2"><img class="game-ext" id="paperexp" src="./assets/paperexp.png" alt="Imagen simbolizando papel"></button>
+                        <button id="al" aria-label="Name" class="gameppt2"><img class="game-ext" id="rockexp" src="./assets/rockexp.png" alt="Imagen simbolizando una roca"></button>
+                        <button id="al" aria-label="Name" class="gameppt2"><img class="game-ext" id="scissorexp" src="./assets/scissorexp.png" alt="Imagen simbolizando tijeras"></button>
+                        <button id="al" aria-label="Name" class="gameppt2"><img class="game-ext" id="spockexp" src="./assets/spockexp.png" alt="Imagen simbolizando a Spock"></button>
                     </div>
                 </div>
                 <button disabled id="restart2">Restart</button>
@@ -87,7 +89,7 @@
         <section id="hangman">
             <h2 class="center">Ahorcado</h2>
             <figure>
-                <img id="try" src="./assets/intentos-5.png" alt="">
+                <img id="try" src="./assets/intentos-5.png" alt="Imagen mostrando como cambia un cuerpo con los intentos">
             </figure>
             <div id="words"></div>
         </section>
