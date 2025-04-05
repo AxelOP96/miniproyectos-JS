@@ -8,7 +8,7 @@ d.addEventListener("DOMContentLoaded", (e)=>{
 
     function renderizarProductos(data){
         data.forEach( (product)=>{
-            console.log(product);
+            
             const $picture = d.createElement("picture");
             const $img = d.createElement("img");
             const $button = d.createElement("button");
@@ -34,10 +34,8 @@ d.addEventListener("DOMContentLoaded", (e)=>{
             $picture.appendChild($h4);
             $menues.appendChild($picture)
         })
-        //$menues.appendChild($picture)
+        
     }
-    console.log("cantidad");
-    console.log($countProducts.innerHTML.slice(10,11))
     if($countProducts.innerHTML.slice(10,11)== '0'){
         const img = d.createElement("img");
         img.setAttribute("src", "./assets/illustration-empty-cart.svg")

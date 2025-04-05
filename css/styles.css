@@ -257,6 +257,7 @@ section{
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  
   & .letter{
     padding: 1.5rem;
     background-color: rgb(181, 242, 181);
@@ -270,11 +271,16 @@ section{
     box-shadow: 1px 1px 1px rgb(8, 56, 8);
   }
 }
+#hangman figure{
+  margin: 0 auto;
+  width: 50%;
+}
 #word{
-  font-size: large;
+  font-weight: bold;
+  font-size: 36px;
   letter-spacing: 4rem;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   background-color: aliceblue;
-  padding: 2rem;
+  padding: 1.5rem;
 }
