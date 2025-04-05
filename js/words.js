@@ -5,12 +5,12 @@ const palabras = [
     "aventuras", "alquileres", "francisco", "misterios", "recibidos", 
     "solitarios", "entusiasmo", "delicioso", "entrenado", "confianza", 
     "distancia", "secretivo", "instantes", "olvidados", "sugestivo", 
-    "espectros", "traducción", "construir", "libertado", "inmortal", 
-    "creación", "sintético", "futuroso", "sinceridad", "vanguardia", 
-    "resistencia", "sorpresas", "máximo", "satisfacción", "discreción", 
-    "evaluar", "tolerancia", "cambiantes", "destrucción", "explosivo", 
+    "espectros", "traduccion", "construir", "libertado", "inmortal", 
+    "creacion", "sintetico", "futuroso", "sinceridad", "vanguardia", 
+    "resistencia", "sorpresas", "maximo", "satisfaccion", "discrecion", 
+    "evaluar", "tolerancia", "cambiantes", "destruccion", "explosivo", 
     "solidez", "tendencia", "sorprendente", "complejos", "aprecio", 
-    "transitar", "resolución", "despacho", "fugaz", "impulso", 
+    "transitar", "resolucion", "despacho", "fugaz", "impulso", 
     "progreso", "necesario", "espectacular", "voluntario"
   ];
 let intentos = 5;
@@ -37,8 +37,7 @@ function mostrarPalabra(){
     $words.insertAdjacentElement("beforebegin", h2)
     return h2;
 }
-//recibo la palabra, reemplazo (replace) la palabra por un guion por cada letra, luego al dar click si esa letra coincide reemplazarla
-    //los dos strings la palabra elegida y la de guiones deberian estar en la misma funcion
+
 function probarLetra($letters, random){
     console.log("random" , random.innerText)
     const palabraElegida = random.innerText;
@@ -47,24 +46,19 @@ function probarLetra($letters, random){
         newWord += "-"
     }
     random.innerHTML = `${newWord}`;
+    
     $letters.forEach((letter) =>{
         letter.addEventListener("click", (e) => intentarLetra(e, random, palabraElegida));
     })
+    
     function intentarLetra(e, palabra, palabraElegida){
-        //console.log(e.target)
-        //console.log(e.target.innerHTML)
         if(palabraElegida.includes(e.target.innerHTML)){
-            //random.innerHTML = palabraElegida[j];
-            console.log("Está")
             for(let i=0; i< palabraElegida.length; i++){
                 if(palabraElegida[i] === e.target.innerHTML){
-                    console.log("La letra a reemplazar es " , palabra.innerHTML[i] )
+                    
                     let palabraArray = palabra.innerHTML.split("");
-                    palabraArray[i] = palabra.innerHTML[i];     // ["h", "e", "l", "a"]
-                    // Unimos el array nuevamente en un string
+                    palabraArray[i] = e.target.innerHTML;
                     palabra.innerHTML = palabraArray.join("");
-                    //palabra.innerHTML[i] = e.target.innerHTML;
-                    console.log(palabra.innerHTML[i])
                 }
             }
         }
