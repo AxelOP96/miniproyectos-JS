@@ -73,6 +73,20 @@ section{
     display: flex;
     
 }
+#cameraOn{
+  outline: none;
+  border: none;
+  border-radius: .5rem;
+  padding: .75rem;
+  background-color: rgb(183, 247, 183);
+  cursor: pointer;
+  font-weight: bold;
+  width: 80px;
+}
+#detector{
+  justify-content: center;
+  align-items: center;
+}
 .text{
     display: flex;
     flex-direction: column;
@@ -135,8 +149,10 @@ section{
 .card-time img{
   max-width: 200px;
 }
+
 #weather{
-  margin-top: 20rem;
+  margin: 20rem auto 0;
+  width: 70%;
 }
 #result, #result2{
   background-color: white;
@@ -157,6 +173,10 @@ section{
   height: 400px;
   margin: 0 auto;
   border-radius: .5rem;
+}
+/*Calculador de edad*/
+#yourAge{
+  max-height: 40vh;
 }
 #age{
   display: flex;
@@ -191,6 +211,7 @@ section{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   /* padding: 2rem; */
   gap: 1.5rem;
 
@@ -286,4 +307,7 @@ section{
   text-transform: uppercase;
   background-color: aliceblue;
   padding: 1.5rem;
+}
+#draganddrop{
+  margin-top: 70vh;
 }

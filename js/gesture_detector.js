@@ -17,13 +17,31 @@ export function showData(){
     <br>Longitud:  ${position.coords.longitude} <br>Precisión:  ${position.coords.accuracy}`);
     }
 }
-export function cameraOn(){
-    n.mediaDevices.getUserMedia({
-        audio: false,
-        video: { width: 840, height: 600 },
-    }).then(function (media){
-        camara.srcObject = media;
-        camara.play();
+export function cameraOn(id){
+    const $cameraOn = d.querySelector(`${id}`);
+    let mediaStream;
+    $cameraOn.addEventListener("click", (e) =>{
+        
+        if (mediaStream) {
+            mediaStream.getTracks().forEach(track => track.stop()); 
+            camara.srcObject = null;  
+            $cameraOn.innerText = "Encender cámara"; 
+            mediaStream = null;  
+        } else {
+            n.mediaDevices.getUserMedia({
+                audio: true,
+                video: { width: 840, height: 600 },
+            }).then(function (media){
+                camara.srcObject = media;
+                mediaStream = media;
+                camara.play();
+                $cameraOn.innerText = "Apagar cámara";
+            })
+            .catch(function (error) {
+                console.log("Error al acceder a la cámara: ", error);
+            });
+        }
     })
+    
     
 }
