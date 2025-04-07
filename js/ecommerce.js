@@ -1,11 +1,13 @@
 const $menues = d.querySelector(".menues");
 const $cart = d.getElementById("cart");
 const $countProducts = d.getElementById("count-products");
+let btnToBuy;
 d.addEventListener("DOMContentLoaded", (e)=>{
     fetch("./data.json")
     .then(response => response.json())
     .then(data => renderizarProductos(data));
 
+    
     function renderizarProductos(data){
         data.forEach( (product)=>{
             
@@ -34,8 +36,23 @@ d.addEventListener("DOMContentLoaded", (e)=>{
             $picture.appendChild($h3);
             $picture.appendChild($h4);
             $menues.appendChild($picture)
-        })
-        
+        });
+        btnToBuy = d.querySelectorAll("button.flex-row")
+        console.log(btnToBuy)
+        if (btnToBuy.length > 0) {
+            btnToBuy.forEach((btn) => {
+                btn.addEventListener("click", (e) => {
+                    // Aquí obtienes el producto del botón clickeado
+                    const productElement = e.target.closest("picture"); // Obtener el contenedor padre (producto)
+                    const productName = productElement.querySelector("h3").innerText;
+                    const productPrice = productElement.querySelector("h4").innerText;
+                    const productImage = productElement.querySelector("img").src;
+
+                    console.log("Producto seleccionado:", productName, productPrice, productImage);
+                    // Puedes agregar la lógica para añadir el producto al carrito aquí
+                });
+            });
+        }
     }
     if($countProducts.innerHTML.slice(10,11)== '0'){
         const img = d.createElement("img");
