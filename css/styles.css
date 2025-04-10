@@ -126,9 +126,7 @@ section{
 .opponent img, .gameppt img, .gameppt2 img{
   border-radius: 50%;
 }
-.none{
-  display: none;
-}
+
 #restart, #restart2{
   margin: auto;
   outline: none;
@@ -243,7 +241,7 @@ section{
 }
 .menues .selected{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: hsl(14, 86%, 42%);
   gap: 1.6rem;
   color: hsl(20, 50%, 98%);
@@ -255,6 +253,9 @@ section{
 .menues .selected img{
   width: 15px;
   height: 15px;
+}
+.none{
+  display: none;
 }
 .menu-desserts{
   width: 80%;
@@ -310,4 +311,24 @@ section{
 }
 #draganddrop{
   margin-top: 70vh;
+}
+/*Drag and drop*/
+
+/*Historial*/
+
+/*Lista de prioridades*/
+#priorities{
+  display: flex;
+  flex-direction: column;
+
+  & #priority{
+    width: 50%;
+    margin: 5% auto;
+    padding: .75rem 1rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: .5rem;
+
+  }
 }
