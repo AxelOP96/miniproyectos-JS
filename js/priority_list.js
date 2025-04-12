@@ -20,10 +20,16 @@ d.addEventListener("keyup", (e)=>{
 })
 function crearPrioridades(){
     for(let i=0; i<20; i++){
+        const article = d.createElement("article");
+
         const span = d.createElement("span");
         span.setAttribute("id", `tarea${i+1}`);
-        span.classList.add( "task");//"none",
+        article.classList.add( "article-task");//"none",
         span.innerHTML = `Tarea ${i+1}`;
-        $priorityList.appendChild(span)
+        article.innerHTML = `
+        <span class="up">⬆️</span>
+        <span class="task">${span.innerHTML}</span>
+        <span class="down">⬇️</span>`
+        $priorityList.appendChild(article)
     }
 }

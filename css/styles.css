@@ -346,3 +346,13 @@ section{
     }
   }
 }
+.article-task{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.up, .down{
+  cursor: pointer;
+  
+}
