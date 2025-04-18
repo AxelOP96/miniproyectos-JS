@@ -313,7 +313,17 @@ section{
   margin-top: 70vh;
 }
 /*Drag and drop*/
-
+.pokemon{
+  border: 1px solid blue;
+  border-radius: .75rem;
+  cursor: pointer;
+}
+.pkmn-container{
+  border: 1px solid blue;
+  border-radius: .75rem;
+  padding: 1rem;
+  max-width: fit-content;
+}
 /*Historial*/
 
 /*Lista de prioridades*/
